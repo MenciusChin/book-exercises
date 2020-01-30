@@ -36,17 +36,16 @@ salaries <- data.frame(salaries, raise = salaries[["salary_adjustment"]] > 0)
 ### cell rather than the whole row!)
 
 # What was the 2018 salary of Employee 57
-salaries[58, 4]
+salaries[salaries$employees == "Employee 57", 4]
 
 # How many employees got a raise?
 length(salaries[, "raise"][salaries[, "raise"]])
 
 # What was the dollar value of the highest raise?
-max_adjustment <- max(salaries$salary_adjustment)
-salaries[salaries$salary_adjustment == max_adjustment, 3]
+salaries[salaries$salary_adjustment == max(salaries$salary_adjustment), 3]
 
 # What was the "name" of the employee who received the highest raise?
-salaries[salaries$salary_adjustment == max_adjustment, 1]
+salaries[salaries$salary_adjustment == max(salaries$salary_adjustment), 1]
 
 # What was the largest decrease in salaries between the two years?
 salaries[salaries$salary_adjustment == min(salaries$salary_adjustment), 3]
