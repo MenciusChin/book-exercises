@@ -54,7 +54,19 @@ jfk_sea_flights <- seatac_flights %>%
   filter(origin == 'JFK') %>%
   summarize(avg = mean(gain_in_air, na.rm = TRUE), max = max(gain_in_air, na.rm = TRUE), 
             min = min(gain_in_air, na.rm = TRUE))
-jfk_sea_flights
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
